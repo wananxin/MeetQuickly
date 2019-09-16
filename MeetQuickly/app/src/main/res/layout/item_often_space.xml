@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="56dp"
+    android:layout_height="70dp">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/bg_coupon_money" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:paddingLeft="12dp"
+        android:paddingBottom="12dp"
+        android:src="@mipmap/ic_img_delete"
+        app:layout_constraintEnd_toEndOf="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="@+id/iv_img" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/font_black6"
+        android:textSize="12dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

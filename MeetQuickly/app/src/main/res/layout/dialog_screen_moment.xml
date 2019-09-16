@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="216dp"
+    android:background="@color/white"
+    >
+
+
+    <TextView
+        android:id="@+id/textView131"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="筛选"
+        android:textColor="@color/font_black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView131"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView131"
+        app:srcCompat="@mipmap/ic_img_delete" />
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="所想看到的"
+        android:textColor="@color/font_black"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView131" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView132">
+
+        <RadioButton
+            android:id="@+id/radioButton0"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:button="@null"
+            android:text="全部"
+            android:checked="true"
+            android:background="@drawable/selector_rb_bg"
+            android:gravity="center"
+            android:textColor="@drawable/selector_rb_text_color"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:button="@null"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:background="@drawable/selector_rb_bg"
+            android:drawableLeft="@mipmap/ic_women"
+            android:text="女"
+            android:textColor="@drawable/selector_rb_text_color"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:background="@drawable/selector_rb_bg"
+            android:drawableLeft="@mipmap/ic_men"
+            android:gravity="center"
+            android:text="男"
+            android:textColor="@drawable/selector_rb_text_color"
+            android:textSize="16dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewSure"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/shape_bt_gray"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/font_black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+</android.support.constraint.ConstraintLayout>

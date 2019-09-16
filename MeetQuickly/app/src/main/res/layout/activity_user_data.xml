@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.home.UserDataActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/white"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:banner_default_image="@mipmap/img_error_place"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_more"
+                        android:layout_width="48dp"
+                        android:layout_height="35dp"
+                        android:padding="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/iv_back"
+                        app:srcCompat="@mipmap/ic_more_white" />
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="40dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="32dp"
+                        android:padding="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/ic_back_white" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/font_black"
+                        android:textSize="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+                    <TextView
+                        android:id="@+id/tv_yp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/font_black"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                    <ImageView
+                        android:id="@+id/iv_follow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_name"
+                        app:srcCompat="@mipmap/ic_follow" />
+
+                    <ImageView
+                        android:id="@+id/imageView45"
+                        android:layout_width="12dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="14dp"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_yp"
+                        app:srcCompat="@mipmap/ic_address_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/font_gray"
+                        android:textSize="12dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView45"
+                        app:layout_constraintStart_toEndOf="@+id/imageView45"
+                        app:layout_constraintTop_toTopOf="@+id/imageView45" />
+
+                    <ImageView
+                        android:id="@+id/iv_sex"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_distance"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_distance"
+                        app:srcCompat="@mipmap/ic_women" />
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/font_gray"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_sex"
+                        app:layout_constraintStart_toEndOf="@+id/iv_sex"
+                        app:layout_constraintTop_toTopOf="@+id/iv_sex" />
+
+                    <TextView
+                        android:id="@+id/tv_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/shape_bg_level"
+                        android:textColor="@color/stroke_level"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_age"
+                        app:layout_constraintStart_toEndOf="@+id/tv_age"
+                        app:layout_constraintTop_toTopOf="@+id/tv_age" />
+
+                    <TextView
+                        android:id="@+id/textView105"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="最近访问"
+                        android:textColor="@color/font_black"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+
+                    <TextView
+                        android:id="@+id/tv_visit_numb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView105"
+                        app:layout_constraintStart_toEndOf="@+id/textView105"
+                        app:layout_constraintTop_toTopOf="@+id/textView105" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_visit"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_visit_more"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView105" />
+
+                    <ImageView
+                        android:id="@+id/iv_visit_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/recyclerView_visit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/recyclerView_visit"
+                        app:srcCompat="@mipmap/ic_more_gray" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/line_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recyclerView_visit" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_back_black"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="14dp"
+                    android:src="@mipmap/ic_back_black" />
+
+                <TextView
+                    android:id="@+id/tv_titlt_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/font_black"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <com.flyco.tablayout.SlidingScaleTabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                app:tl_indicator_color="@color/themeColor"
+                app:tl_indicator_corner_radius="1dp"
+                app:tl_indicator_gravity="BOTTOM"
+                app:tl_indicator_height="2dp"
+                app:tl_indicator_width="15dp"
+                app:tl_tab_gravity="Bottom"
+
+                app:tl_tab_marginBottom="8dp"
+                app:tl_tab_padding="15dp"
+                app:tl_textBold="SELECT"
+
+                app:tl_textSelectColor="@color/font_black"
+                app:tl_textSelectSize="24sp"
+                app:tl_textUnSelectColor="@color/font_black"
+                app:tl_textUnSelectSize="14sp" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bt_sure"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="25dp"
+        android:background="@mipmap/bt_background"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:id="@+id/ivYuding"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_message_white"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textViewYuding"
+            />
+
+        <TextView
+            android:id="@+id/textViewYuding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="发消息"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivYuding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

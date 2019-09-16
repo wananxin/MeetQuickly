@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="325dp"
+        android:layout_height="364dp"
+        android:background="@drawable/shape_bg_dialog"
+        >
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="领取代金券"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="302dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="24dp"
+            android:background="@mipmap/bg_conpon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+
+            <TextView
+                android:id="@+id/textViewMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="2000"
+                android:textColor="@color/themeColor"
+                android:textSize="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewXianzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="仅限该店使用"
+                android:textColor="@color/font_gray"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewMoney"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewLingqu"
+                android:layout_width="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_bt_gray"
+                android:gravity="center"
+                android:text="领取"
+                android:textColor="@color/font_black"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                android:text="有效日期：2019.03.04-2019.08.30"
+                android:textColor="@color/font_gray"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textColor="@color/font_gray"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewXianzhi"
+                app:layout_constraintTop_toBottomOf="@+id/textViewXianzhi" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textViewBiLi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="1.此代金券由平台提供"
+            android:textColor="@color/font_gray"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+        <TextView
+            android:id="@+id/textViewManagePhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="2.此代金券不能与其他券同时使用"
+            android:textColor="@color/font_gray"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBiLi" />
+
+        <TextView
+            android:id="@+id/textViewThree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="8dp"
+            android:text="3.此代金券使用以后不在享受消费后的返现"
+            android:textColor="@color/font_gray"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/textViewManagePhone"
+            app:layout_constraintTop_toBottomOf="@+id/textViewManagePhone" />
+
+        <TextView
+            android:id="@+id/textViewInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="8dp"
+            android:text="4.此代金券由本平台提供，最终解释权归本平台所有"
+            android:textColor="@color/font_gray"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/textViewThree"
+            app:layout_constraintTop_toBottomOf="@+id/textViewThree" />
+
+        <TextView
+            android:id="@+id/textViewYuding"
+            android:layout_width="275dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_bt_gray"
+            android:gravity="center"
+            android:text="预订"
+            android:textColor="@color/font_black"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfo" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

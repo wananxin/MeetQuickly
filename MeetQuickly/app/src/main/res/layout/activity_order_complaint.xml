@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.user.OrderComplaintActivity">
+
+    <include layout="@layout/view_toolbar" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="活动与实际消费不符"
+            android:textSize="16dp"
+            android:buttonTint="@color/font_gray"
+            android:textColor="@color/font_black"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="包厢环境与实际不符"
+            android:textSize="16dp"
+            android:buttonTint="@color/font_gray"
+            android:textColor="@color/font_black"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="服务态度较差"
+            android:textSize="16dp"
+            android:buttonTint="@color/font_gray"
+            android:textColor="@color/font_black"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/shape_et_gray"
+        android:padding="10dp"
+        android:hint="其他投诉内容"
+        android:maxLines="100"
+        android:gravity="start"
+        android:textSize="12dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_et_numb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/100"
+        android:layout_gravity="right"
+        android:padding="16dp"
+        android:textSize="16dp"
+        android:textColor="@color/font_black"
+        />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="38dp"
+        android:gravity="center"
+        android:text="提交"
+        android:textSize="18dp"
+        android:textColor="@color/font_black"
+        android:background="@drawable/shape_bt_gray" />
+
+
+</LinearLayout>

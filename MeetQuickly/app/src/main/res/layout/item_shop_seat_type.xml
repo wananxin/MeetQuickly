@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="275dp"
+    android:layout_height="130dp"
+    android:layout_marginRight="10dp"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="275dp"
+        android:layout_height="130dp"
+        android:id="@+id/constraintLayout"
+        android:background="@color/themeColor">
+
+        <!--店铺包厢类型-->
+
+        <TextView
+            android:id="@+id/textViewSeatAndPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="中包（4~7人）"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewBoxFree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:text="包厢费：￥800"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSeatAndPeople" />
+
+        <TextView
+            android:id="@+id/textViewMinFree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:text="低 消：￥1980"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBoxFree" />
+
+        <TextView
+            android:id="@+id/textViewMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:text="包厢套餐：开房套餐（麦套、毛巾费、版权费、 打火机、）开机赠送果盘一个养生茶一壶"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMinFree" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

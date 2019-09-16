@@ -1,0 +1,224 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.andy.meetquickly"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 13
+        versionName "1.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "f4ace2fca993d396e65ad446", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    packagingOptions {//加上这些代码
+        pickFirst 'lib/x86_64/librsjni_androidx.so'
+        pickFirst 'lib/armeabi-v7a/librsjni_androidx.so'
+        pickFirst 'lib/arm64-v8a/librsjni_androidx.so'
+        pickFirst 'lib/armeabi-v8a/librsjni_androidx.so'
+        pickFirst 'lib/x86/librsjni_androidx.so'
+    }
+
+    signingConfigs {
+        config {
+            keyPassword '123456'
+            storeFile file('C:\\Users\\admin\\Desktop\\mProject\\MeetQuickly\\meetquickly.jks')
+            storePassword '123456'
+            keyAlias 'meetquickly'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:design:28.0.0'
+
+    /*butterknife*/
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    /*沉浸式状态栏*/
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
+
+    /*侧滑返回*/
+    implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
+
+    /*字体选中变大的tablayout*/
+    implementation 'com.lzp:FlycoTabLayoutZ:1.0.4'
+
+    /*dialog控件*/
+    implementation 'com.kongzue.dialog:dialog:2.4.8'
+
+    /*Adapter超级适配器*/
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    /*选择器*/
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+
+    /*照片选择*/
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    /*网络请求*/
+    implementation 'com.zhouyou:rxeasyhttp:2.1.5'
+
+    /*数据解析*/
+    implementation 'com.alibaba:fastjson:1.2.58'
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //基础工具库
+    implementation "com.github.vondear.RxTool:RxKit:v2.2.7"
+
+    /*验证码*/
+    implementation 'com.justkiddingbaby:vercodeedittext:1.1.0'
+
+    /*日志打印*/
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    /*Glide多个样式*/
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+
+    /*方法数溺出*/
+    implementation 'com.android.support:multidex:1.0.3'
+
+    /*Banner滑动*/
+    implementation 'com.youth.banner:banner:1.4.10'  //最新版本
+
+    /*融云*/
+    implementation project(":IMKit")
+
+    /*垂直跑马灯*/
+    implementation 'com.sunfusheng:MarqueeView:1.4.1'
+
+    /*通讯录导航栏*/
+    implementation 'com.github.qdxxxx:IndexBarLayout:1.0.2'
+
+    /*手势密码*/
+    implementation 'com.wangnan:gesturelockview:1.0.2'
+
+    /*支付宝支付*/
+    implementation(name: 'alipaySdk-15.6.2-20190416165100-noUtdid', ext: 'aar')
+
+    /*双向SeekBar*/
+    implementation 'com.appyvet:materialrangebar:1.4.6'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    /*城市选择三级联动*/
+    implementation 'liji.library.dev:citypickerview:4.2.1'
+
+    /*RatingBar*/
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.2'
+
+    /*角标*/
+    implementation 'q.rorbin:badgeview:1.1.3'
+    implementation project(path: ':videocroplibrary')
+
+    /*动态权限*/
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    /*录制视频*/
+    implementation 'cjt.library.wheel:camera:1.1.9'
+
+    implementation 'io.reactivex:rxandroid:1.2.1'
+
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0.4'
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
+
+    /*图片预览*/
+    implementation 'com.github.SherlockGougou:BigImageViewPager:v4_4.0.2'
+
+    /*ViewPager指示点*/
+    implementation 'com.github.LinweiJ:ViewPagerIndicator:0.1.0'
+
+    /*新手引导层*/
+    implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+
+    /*极光推送*/
+    implementation 'cn.jiguang.sdk:jpush:3.3.4'  // 此处以JPush 3.3.2 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.1.2'  // 此处以JCore 2.0.1 版本为例。
+
+    /*腾讯Bugly*/
+//    implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
+    /*华为推送*/
+//    implementation 'com.huawei.android.hms:iap:2.6.1.301'
+    implementation(name: 'base-2.6.1.301', ext: 'aar')
+    implementation(name: 'push-2.6.1.301', ext: 'aar')
+
+
+}

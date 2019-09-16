@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.user.UserAuthenticationActivity">
+
+    <include layout="@layout/view_toolbar" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/line_gray"
+        android:text="证件信息设置后不能修改，请填写本人实名信息，如非本人实名 将无法提现。"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="12dp"
+        android:textColor="@color/font_black6"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingTop="70dp"
+        android:paddingRight="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:src="@mipmap/ic_user" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="真实姓名"
+                android:textSize="14dp"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:src="@mipmap/ic_id_card" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_card_numb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="身份证号码"
+                android:textSize="14dp"
+                android:inputType="number"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray" />
+
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/shape_bt_gray"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/font_black"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+    
+</LinearLayout>

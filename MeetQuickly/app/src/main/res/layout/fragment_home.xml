@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:banner_default_image="@mipmap/img_error_place"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/textViewSearch"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/shape_bt_gray"
+                    android:drawableLeft="@mipmap/ic_message_find_black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ic_message_find_black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="搜索"
+                        android:textColor="@color/font_black"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/banner">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/bg_home_top"
+                        >
+
+                        <com.lwj.widget.viewpagerindicator.ViewPagerIndicator
+                            android:id="@+id/indicator_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            app:vpi_default_color="#cdcdcd"
+                            app:vpi_distanceType="BY_DISTANCE"
+                            app:vpi_distance="12dp"
+                            app:vpi_indicatorType="CIRCLE"
+                            android:layout_marginTop="6dp"
+                            app:vpi_radius="2dp"
+                            app:vpi_selected_color="@color/themeColor"
+                            />
+
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@mipmap/bg_home_bottom"
+                        >
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:background="@drawable/shape_red"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            />
+
+                        <com.sunfusheng.marqueeview.MarqueeView
+                            android:id="@+id/marqueeView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_gravity="center_vertical"
+                            app:mvAnimDuration="1000"
+                            app:mvDirection="bottom_to_top"
+                            app:mvInterval="3000"
+                            app:mvTextColor="@color/font_gray"
+                            app:mvTextSize="12dp"
+                            app:mvSingleLine="true"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="bottom"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal">
+
+            <com.flyco.tablayout.SlidingScaleTabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                app:tl_indicator_color="@color/themeColor"
+                app:tl_indicator_corner_radius="1dp"
+                app:tl_indicator_gravity="BOTTOM"
+                app:tl_indicator_height="2dp"
+                app:tl_indicator_width="15dp"
+                app:tl_tab_gravity="Bottom"
+                app:tl_tab_marginBottom="8dp"
+                app:tl_textBold="SELECT"
+                app:tl_textSelectColor="@color/font_black"
+                app:tl_textSelectSize="24sp"
+                app:tl_textUnSelectColor="@color/font_black"
+                app:tl_textUnSelectSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_screen"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="12dp"
+                android:src="@mipmap/ic_screen" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

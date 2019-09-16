@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/imageView82"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:scaleType="centerCrop"
+
+            app:srcCompat="@mipmap/demo_bg" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="百威"
+        android:textColor="@color/font_black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView82"
+        app:layout_constraintTop_toTopOf="@+id/imageView82" />
+
+    <TextView
+        android:id="@+id/textView141"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="（啤酒）"
+        android:textColor="@color/font_gray"
+        android:textSize="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_price_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="￥580/打"
+        android:textColor="@color/themeColor"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView82"
+        app:layout_constraintStart_toEndOf="@+id/imageView82" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="￥880"
+        android:textColor="@color/font_gray"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_price_company"
+        app:layout_constraintStart_toEndOf="@+id/tv_price_company" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/font_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price"
+        app:layout_constraintEnd_toEndOf="@id/tv_price"
+        app:layout_constraintStart_toStartOf="@id/tv_price"
+        app:layout_constraintTop_toTopOf="@id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="人头马是一山东矿机会发收到货奥斯卡级好地方个白兰地品牌，创建于1724年，人 头马酒庄是世界公认的特优香槟干邑专家。"
+        android:textColor="@color/font_gray"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_price_company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView82"
+        app:layout_constraintTop_toBottomOf="@+id/textView141" />
+</android.support.constraint.ConstraintLayout>

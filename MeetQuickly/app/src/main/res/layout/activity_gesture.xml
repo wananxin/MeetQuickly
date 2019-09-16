@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.user.GestureActivity">
+
+    <include
+        android:id="@+id/include10"
+        layout="@layout/view_toolbar" />
+
+
+    <com.wangnan.library.GestureLockView
+        android:id="@+id/glv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        app:error_color="@color/stroke_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfo"
+        app:line_thickness="1dp" />
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="绘制解锁图案"
+        android:textColor="@color/font_black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include10" />
+
+    <TextView
+        android:id="@+id/textViewForget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text=""
+        android:textColor="@color/font_black"
+        android:textSize="16dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/glv"
+        app:layout_constraintTop_toBottomOf="@+id/glv" />
+
+</android.support.constraint.ConstraintLayout>

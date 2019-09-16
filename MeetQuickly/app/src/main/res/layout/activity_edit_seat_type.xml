@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.user.EditSeatTypeActivity">
+
+    <include layout="@layout/view_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="包厢/卡台类型"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_seat_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入"
+                    android:maxLines="1"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="可容纳人数"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_people_numb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="(6~8)"
+                    android:textColor="@color/themeColor"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <com.appyvet.materialrangebar.RangeBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rangebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:mrb_barWeight="3dp"
+                app:mrb_rangeBarColor="@color/font_gray"
+                app:mrb_connectingLineColor="@color/themeColor"
+                app:mrb_connectingLineWeight="3dp"
+                app:mrb_leftSelectorColor="@color/white"
+                app:mrb_pinColor="@color/themeColor"
+                app:mrb_pinMaxFont="15sp"
+                app:mrb_pinMinFont="12sp"
+                app:mrb_pinRadius="14dp"
+                app:mrb_pinTextColor="@color/white"
+                app:mrb_rangeBar="true"
+                app:mrb_rangeBarPaddingBottom="30dp"
+                app:mrb_rangeBar_rounded="true"
+                app:mrb_rightSelectorColor="@color/white"
+                app:mrb_selectorBoundaryColor="@color/themeColor"
+                app:mrb_selectorBoundarySize="2dp"
+                app:mrb_selectorSize="10dp"
+                app:mrb_temporaryPins="true"
+                app:mrb_tickColors="@array/tick_colors"
+                app:mrb_tickEnd="40"
+                app:mrb_tickStart="1"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="包厢费"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_box_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="最低消费"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_min_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="低消配置"
+                android:textSize="16dp"
+                android:textColor="@color/font_black"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_et_gray"
+                android:gravity="start"
+                android:hint="请输入低消所包含的物品"
+                android:maxLength="60"
+                android:padding="10dp"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="38dp"
+                android:background="@drawable/shape_bt_gray"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/font_black"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

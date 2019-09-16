@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--动态互动-->
+
+
+    <ImageView
+        android:id="@+id/imageViewHead"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_task_head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="肉坨坨"
+        android:textColor="@color/font_black6"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHead"
+        app:layout_constraintTop_toTopOf="@+id/imageViewHead" />
+
+    <ImageView
+        android:id="@+id/imageViewSex"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+        app:layout_constraintStart_toEndOf="@+id/textViewName"
+        app:layout_constraintTop_toTopOf="@+id/textViewName"
+        app:srcCompat="@mipmap/ic_women" />
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="22"
+        android:textColor="@color/font_gray"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewSex"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSex"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSex" />
+
+    <TextView
+        android:id="@+id/textViewContent"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="世间只有公道，说道不如风花雪月"
+        android:textColor="@color/font_black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHead"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewHead">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/demo_bg" />
+
+            <TextView
+                android:id="@+id/tv_shuoshuo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/line_gray"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:padding="6dp"
+                android:text="反馈结果很快就会发高科技化工" />
+
+            <ImageView
+                android:id="@+id/iv_video"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_video" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="03-16 21:20"
+        android:textColor="@color/font_gray"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHead"
+        app:layout_constraintTop_toBottomOf="@+id/textViewContent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTime"
+        app:layout_constraintStart_toEndOf="@+id/textViewTime"
+        app:layout_constraintTop_toTopOf="@+id/textViewTime"
+        app:srcCompat="@mipmap/ic_address_gray" />
+
+    <TextView
+        android:id="@+id/textViewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="12KM"
+        android:textColor="@color/font_gray"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/textViewHuifu"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_bt_gray"
+        android:gravity="center"
+        android:text="回复"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHead"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+</android.support.constraint.ConstraintLayout>

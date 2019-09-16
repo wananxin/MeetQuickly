@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <TextView
+        android:id="@+id/textViewCouponMoney"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/shape_red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="您有1个订单正在进行"
+        android:textColor="@color/font_black6"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCouponMoney"
+        app:layout_constraintStart_toEndOf="@+id/textViewCouponMoney"
+        app:layout_constraintTop_toTopOf="@+id/textViewCouponMoney" />
+
+    <ImageView
+        android:id="@+id/imageViewInto"
+        android:layout_width="28dp"
+        android:layout_height="35dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewNumb"
+        android:src="@mipmap/ic_back_right_gray" />
+
+    <TextView
+        android:id="@+id/textViewSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="订台场所："
+        android:textColor="@color/font_black6"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="@+id/textViewNumb"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumb" />
+
+    <TextView
+        android:id="@+id/textViewShopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="十二兽"
+        android:textSize="12dp"
+        android:textColor="@color/font_black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSeat"
+        app:layout_constraintStart_toEndOf="@+id/textViewSeat"
+        app:layout_constraintTop_toTopOf="@+id/textViewSeat" />
+
+    <TextView
+        android:id="@+id/textViewSeatNumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='（包厢台号：K05)'
+        android:textColor="@color/font_black6"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSeat"
+        app:layout_constraintStart_toEndOf="@+id/textViewShopName"
+        app:layout_constraintTop_toTopOf="@+id/textViewSeat" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="接待经理："
+        android:textColor="@color/font_black6"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewNumb" />
+
+    <TextView
+        android:id="@+id/textViewManageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刘经理"
+        android:textSize="12dp"
+        android:textColor="@color/font_black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+        app:layout_constraintStart_toEndOf="@+id/textViewName"
+        app:layout_constraintTop_toTopOf="@+id/textViewName" />
+
+    <TextView
+        android:id="@+id/textViewManagePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='（13687394301）'
+        android:textColor="@color/font_black6"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+        app:layout_constraintStart_toEndOf="@+id/textViewManageName"
+        app:layout_constraintTop_toTopOf="@+id/textViewName" />
+
+    <ImageView
+        android:id="@+id/imageViewQRCode"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@mipmap/ic_navigation" />
+
+    <ImageView
+        android:id="@+id/imageViewCallPhone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="12dp"
+        android:src="@mipmap/ic_call_phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageViewQRCode" />
+
+
+</android.support.constraint.ConstraintLayout>

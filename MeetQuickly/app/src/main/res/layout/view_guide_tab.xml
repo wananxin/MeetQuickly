@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:text="还在犹豫不决，不知道哪里好玩？填写需求，我们助你快速找到适合您的场所。"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="center"
+        />
+
+</android.support.constraint.ConstraintLayout>

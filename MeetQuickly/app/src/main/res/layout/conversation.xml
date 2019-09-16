@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:padding="12dp"
+            android:src="@mipmap/ic_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="快逅"
+            android:textColor="@color/font_black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_add_friend"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@mipmap/ic_add_friend"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/conversation"
+        android:name="io.rong.imkit.fragment.ConversationFragment"
+        android:layout_below="@id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_gift"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="赠送礼物"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:padding="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_delete_gray" />
+
+        <ImageView
+            android:id="@+id/iv_gift_add"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@mipmap/ic_gift_add" />
+
+        <TextView
+            android:id="@+id/tv_gift_numb"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_gift_add"
+            app:layout_constraintStart_toEndOf="@+id/iv_gift_add"
+            app:layout_constraintTop_toTopOf="@+id/iv_gift_add" />
+
+        <ImageView
+            android:id="@+id/iv_gift_cut"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_gift_add"
+            app:layout_constraintStart_toEndOf="@+id/tv_gift_numb"
+            app:layout_constraintTop_toTopOf="@+id/iv_gift_add"
+            app:srcCompat="@mipmap/ic_gift_cut" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="40dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_bt_gray_5dp"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/iv_gift_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>

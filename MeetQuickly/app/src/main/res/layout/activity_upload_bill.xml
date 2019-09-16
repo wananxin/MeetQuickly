@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.user.manager.UploadBillActivity">
+
+    <include layout="@layout/view_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_order_numb"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="订单号1592583"
+        android:textColor="@color/font_black"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@mipmap/ic_img_delete" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@mipmap/ic_img_delete" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_add_pic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="165dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                app:cardBackgroundColor="@color/line_gray">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_camera"
+                        android:layout_width="58dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@mipmap/ic_camera" />
+
+                    <TextView
+                        android:id="@+id/tv_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_camera"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14dp"
+                        android:text="拍摄消费账单"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_place_holder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginLeft="38dp"
+        android:background="@drawable/shape_bt_gray"
+        android:text="提交"
+        android:textSize="18dp"
+        android:textColor="@color/font_black"
+        />
+
+
+</LinearLayout>

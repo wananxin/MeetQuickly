@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.home.HomeSearchActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="12dp"
+            android:src="@mipmap/ic_back_black" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bt_gray"
+            android:drawableLeft="@mipmap/ic_home_search"
+            android:drawablePadding="8dp"
+            android:hint="请输入搜索内容"
+            android:paddingLeft="12dp"
+            android:textColor="@color/font_black"
+            android:textColorHint="@color/font_black"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="搜索"
+            android:textColor="@color/themeColor"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <RadioButton
+            android:id="@+id/radioButtonShop"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/selector_rb_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="网店"
+            android:textColor="@drawable/selector_rb_text_color"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonUser"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/selector_rb_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="用户"
+            android:textColor="@drawable/selector_rb_text_color"
+            android:textSize="16dp" />
+
+    </RadioGroup>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+
+</android.support.constraint.ConstraintLayout>

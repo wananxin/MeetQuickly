@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="120dp"
+    android:background="@drawable/shape_bg_dialog">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="200dp"
+        android:layout_height="120dp">
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="您向 郭子豪（德刚）打赏了"
+        android:textColor="@color/font_black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_gift"
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_gift_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+        app:srcCompat="@mipmap/ic_agent" />
+
+    <TextView
+        android:id="@+id/tv_gift_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="爱心玫瑰"
+        android:textColor="@color/font_black6"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_gift"
+        app:layout_constraintTop_toTopOf="@+id/iv_gift" />
+
+    <TextView
+        android:id="@+id/tv_gift_numb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="x200"
+        android:textColor="@color/font_black6"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_gift"
+        app:layout_constraintStart_toEndOf="@+id/iv_gift" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

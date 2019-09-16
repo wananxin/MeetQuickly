@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="css/mui.min.css">
+		 <script type="text/javascript">
+                                    //iOS用于js交互必备代码：
+                                    function setupWebViewJavascriptBridge(callback) {
+                                        if (window.WebViewJavascriptBridge) {
+                                            return callback(WebViewJavascriptBridge);
+                                        }
+                                        if (window.WVJBCallbacks) {
+                                            return window.WVJBCallbacks.push(callback);
+                                        }
+                                        
+                                        window.WVJBCallbacks = [callback];
+                                        var WVJBIframe = document.createElement('iframe');
+                                        WVJBIframe.style.display = 'none';
+                                        WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+                                        document.documentElement.appendChild(WVJBIframe);
+                                        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+                                    }
+                                //分享回调接口depart--分享平台，result--分享结果.字符串描述直接存储
+                                function shareResultCallback(data) {
+                                    alert(data);
+                                }
+         function is_weixin(){
+             var u = navigator.userAgent, app = navigator.appVersion;
+             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+             var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+                                   if (isAndroid) {
+                                   return true;
+                                   }
+                                   if (isIOS) {
+                                   return false;
+                                   }
+         }
+                                setupWebViewJavascriptBridge(function(bridge) {
+                                                             bridge.registerHandler('shareResultCallback', function(data, responseCallback) {
+                                                                                    alert('JS方法被调用:'+data);
+                                                                                    responseCallback('js执行过了');
+                                                                                    })
+                                                                })
+                                                             //js调用native
+                                                             function testoneshare(){
+                                   var op=is_weixin();
+                                   if(op){
+                                        kuaihou.share();
+                                   }else{
+                                    WebViewJavascriptBridge.callHandler('testShareFunction', "close");
+                                   }
+                                   
+                                }
+                                </script>
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.mui-bar {
+				background-color: #d92028;
+			}
+			
+			.mui-title {
+				color: #fff;
+			}
+			
+			.mui-bar .mui-icon:active {
+				opacity: 0.6;
+			}
+			
+			.mui-bar a {
+				color: #fff;
+			}
+			
+			a:active {
+				color: #fff;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				color: #fff;
+				border: 1px solid #d92028;
+				background-color: #d92028;
+			}
+			
+			.section {
+				margin-top: 44px;
+				
+				
+			}
+			.mui-btn-outlined.mui-btn-primary {
+    			color: #fff;
+			}
+			.mui-btn,
+			button {
+				width: 95%;
+				margin-left:2.5%;
+			}
+			.jilv{float: right;
+			    padding-top: 14px;
+			    font-size: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">操作成功</h1>
+		</header>
+		
+		<div class="section">
+			<div style="width: 100%;height: 300px;background-color: #fff;">
+				<p style="text-align: center;padding-top:80px;"><img src="img/check.png"/ style="width: 100px;"></p>
+			</div>
+			<button onclick="testoneshare()"  type="button" class="mui-btn mui-btn-primary" style="margin-top: 20px;" id="submit">完成</button>
+		</div>
+
+
+	</body>
+
+</html>

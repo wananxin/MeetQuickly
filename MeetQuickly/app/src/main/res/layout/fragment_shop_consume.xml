@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.shopinfo.ShopConsumeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView127"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="台位类型"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView71"
+            app:layout_constraintStart_toEndOf="@+id/imageView71"
+            app:layout_constraintTop_toTopOf="@+id/imageView71" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_seat_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView71" />
+
+        <TextView
+            android:id="@+id/textView128"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="啤酒"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView72"
+            app:layout_constraintStart_toEndOf="@+id/imageView72"
+            app:layout_constraintTop_toTopOf="@+id/imageView72" />
+
+        <ImageView
+            android:id="@+id/imageView72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_seat_type" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_pijiu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView72" />
+
+        <ImageView
+            android:id="@+id/imageView73"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_pijiu" />
+
+        <TextView
+            android:id="@+id/textView129"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="洋酒"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView73"
+            app:layout_constraintStart_toEndOf="@+id/imageView72"
+            app:layout_constraintTop_toTopOf="@+id/imageView73" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_yangjiu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView73" />
+
+        <ImageView
+            android:id="@+id/imageViewHongjiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_yangjiu" />
+
+        <TextView
+            android:id="@+id/textViewHongjiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="红酒"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHongjiu"
+            app:layout_constraintStart_toEndOf="@+id/imageViewHongjiu"
+            app:layout_constraintTop_toTopOf="@+id/imageViewHongjiu" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_hongjiu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHongjiu" />
+
+        <ImageView
+            android:id="@+id/imageViewJiweijiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_hongjiu" />
+
+        <TextView
+            android:id="@+id/textViewJiweijiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="鸡尾酒"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewJiweijiu"
+            app:layout_constraintStart_toEndOf="@+id/imageViewJiweijiu"
+            app:layout_constraintTop_toTopOf="@+id/imageViewJiweijiu" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_jiweijiu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewJiweijiu" />
+
+        <ImageView
+            android:id="@+id/imageViewXiaochi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_jiweijiu" />
+
+        <TextView
+            android:id="@+id/textViewXiaochi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="小吃"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewXiaochi"
+            app:layout_constraintStart_toEndOf="@+id/imageViewXiaochi"
+            app:layout_constraintTop_toTopOf="@+id/imageViewXiaochi" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_xiaochi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewXiaochi" />
+
+        <ImageView
+            android:id="@+id/imageViewQita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_xiaochi" />
+
+        <TextView
+            android:id="@+id/textViewQita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="其他"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewQita"
+            app:layout_constraintStart_toEndOf="@+id/imageViewQita"
+            app:layout_constraintTop_toTopOf="@+id/imageViewQita" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_qita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewQita" />
+
+        <ImageView
+            android:id="@+id/imageViewTaocan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_user_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_qita" />
+
+        <TextView
+            android:id="@+id/textViewTaocan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="套餐"
+            android:textColor="@color/font_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewTaocan"
+            app:layout_constraintStart_toEndOf="@+id/imageViewTaocan"
+            app:layout_constraintTop_toTopOf="@+id/imageViewTaocan" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_taocan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTaocan" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

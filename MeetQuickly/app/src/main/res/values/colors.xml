@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E24333</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#E24333</color>
+
+    <color name="themeColor">#E24333</color><!--主题色 -->
+    <color name="appBlue">#00CCCC</color><!--字体天蓝 -->
+
+    <color name="white">#ffffff</color><!--白色 -->
+    <color name="red">#ff0000</color><!--红色 -->
+    <color name="black">#000000</color><!--黑色 -->
+
+    <color name="font_black">#333333</color><!--字体黑-->
+    <color name="font_black6">#666666</color><!--字体次黑-->
+    <color name="font_gray">#999999</color><!--字体灰-->
+
+    <color name="line_gray">#eeeeee</color><!--分割线-->
+    <color name="solid_gray">#eeeeee</color><!--灰色按钮填充色-->
+    <color name="stroke_gray">#cccccc</color>
+    <color name="stroke_level">#daab31</color>
+    <color name="background_material_light">#ffffff</color><!--灰色按钮边距色-->
+
+    <color name="item_decoration_title_background">#eeeeee</color>
+    <color name="item_decoration_title_fontcolor">#666666</color>
+
+    <color name="dialog_hint">#4CD8DFE7</color>
+    <color name="circle_bg">#60000000</color>
+
+    <color name="shadow">#cc222222</color>
+
+
+</resources>

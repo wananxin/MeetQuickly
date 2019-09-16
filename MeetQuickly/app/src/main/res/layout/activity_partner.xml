@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.user.partner.PartnerActivity">
+
+    <include
+        android:id="@+id/include12"
+        layout="@layout/view_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_user_head"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include12"
+        app:srcCompat="@mipmap/ic_task_head" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="郭子豪"
+        android:textColor="@color/font_black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_user_head"
+        app:layout_constraintTop_toTopOf="@+id/iv_user_head" />
+
+    <TextView
+        android:id="@+id/tv_user_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:textColor="@color/font_gray"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_user_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_user_name" />
+
+    <TextView
+        android:id="@+id/tv_partner_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/font_black"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user_head"
+        app:layout_constraintStart_toEndOf="@+id/iv_user_head" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/iv_user_head">
+
+        <com.flyco.tablayout.SlidingScaleTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            app:tl_indicator_color="@color/themeColor"
+            app:tl_indicator_corner_radius="1dp"
+            app:tl_indicator_gravity="BOTTOM"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_width="15dp"
+            app:tl_tab_gravity="Bottom"
+            app:tl_tab_marginBottom="8dp"
+            app:tl_tab_padding="15dp"
+            app:tl_textBold="SELECT"
+            app:tl_textSelectColor="@color/font_black"
+            app:tl_textSelectSize="24sp"
+            app:tl_textUnSelectColor="@color/font_black"
+            app:tl_textUnSelectSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_sck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="素材库"
+            android:visibility="invisible"
+            android:textColor="@color/font_black"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+
+</android.support.constraint.ConstraintLayout>
